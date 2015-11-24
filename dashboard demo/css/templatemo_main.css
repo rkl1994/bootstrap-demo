@@ -1,0 +1,62 @@
+/* 
+    1. CSS Imports
+    2. General Styles
+    3. Sidebar
+    4. Charts
+    5. Preferences form
+    6. Sign in form
+    7. tables.html
+    8. Bootstrap overrides
+    9. Maps
+    10. Media Queries
+--------------------------------------- */
+
+/* 1. CSS Imports
+--------------------------------------- */
+@import url("http://libs.baidu.com/fontawesome/4.1.0/css/font-awesome.min.css");
+@import url("http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css");
+
+/* 2. General Styles
+--------------------------------------- */
+* { font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+body { background-color: rgb(235,235,235); }
+h1 { font-size: 24px; }
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.logo {display: inline-block;}
+.logo h1 {
+    font-size: 24px;
+    margin: 10px 15px;
+}
+
+.margin-bottom-15 { margin-bottom: 15px; }
+.margin-bottom-30 { margin-bottom: 30px; }
+
+/* 3. Sidebar
+------------------------------------------------------*/
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.navbar-header { color: rgb(127,127,127); }
+.templatemo-sidebar {
+    margin-top: 20px;
+    padding: 0;
+}
+
+#templatemo_search_box {
+    width: 150px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
