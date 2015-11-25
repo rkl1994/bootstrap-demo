@@ -12,7 +12,7 @@
     <div class="navbar navbar-inverse" role="navigation">
       <div class="navbar-header">
         <div class="logo">
-          <h1>Dashboard - Admin Template</h1>
+          <h1>Admin Backend</h1>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
               <li><a href="#">Facilisi</a></li>
             </ul>
           </li>
-          <li class="active">
+          <li class="active1">
             <a href="#"><i class="fa fa-cubes"></i><span class="badge pull-right">9</span>data visualization</a>
           </li>
           <li><a href="#"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>Maps</a>
@@ -53,13 +53,149 @@
           <li><a href="#" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>Sign Out</a></li>
         </ul>
       </div>
+      
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Admin Panel</a></li>
+            <li><a href="#">Data Visualization</a></li>
+            <li class="active">Charts</li>
+          </ol>
+          <h1>Chart</h1>
+          <div class="templatemo-charts">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="panel panel-info">
+                  <div class="panel-heading">Pie Chart &amp; Doughnut Chart</div>
+                </div>
+                <div class="row templatemo-chart-row">
+                  <div class="templatemo-chart-box col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <canvas id="templatemo-pie-chart"></canvas>
+                    <h4>Pie Chart</h4>
+                    <span class="text-muted">Masdsd sfet</span>
+                  </div>
+
+                  <div class="templatemo-chart-box col-leg-3 col-md-3 col-sm-4 col-xs-12">
+                    <canvas id="templatemo-doughnut-chart"></canvas>
+                    <h4>Doughnut Chart</h4>
+                    <span class="text-muted">Soodf odfdf aaas</span>
+                  </div>
+
+                  <div class="templatemo-chart-box col-leg-3 col-md-3 col-sm-4 col-xs-12">
+                    <canvas id="templatemo-radar-chart"></canvas>
+                    <h4>Radar Chart</h4>
+                    <span class="text-muted">gdj sfdsk</span>
+                  </div>
+
+                  <div class="templatemo-chart-box col-leg-3 col-md-3 col-sm-4 col-xs-12">
+                    <canvas id="templatemo-polar-chart"></canvas>
+                    <h4>Polar Chart</h4>
+                    <span class="text-muted">cbdfeeo</span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="panel panel-info">
+                  <div class="panel-heading">Line Chart</div>
+                  <canvas id="templatemo-line-chart"></canvas>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="panel panel-info">
+                  <div class="panel-heading">Bar Chart</div>
+                  <canvas id="templatemo-bar-chart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
   </div>
 
-     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+   <script src="http://cdn.bootcss.com/Chart.js/1.0.2/Chart.min.js"></script>
+   <script src="dashboard.js"></script>
+   <script type="text/javascript">
+      // Line chart
+      var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+      var lineChartData = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+        {
+          label: "My First dataset",
+          fillColor : "rgba(0,0,0,0)",
+          strokeColor : "rgb(92, 186, 230)",
+          pointColor : "rgb(92, 186, 230)",
+          pointStrokeColor : "#fff",
+          pointHighlightFill : "#fff",
+          pointHighlightStroke : "rgba(220,220,220,1)",
+          data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        },
+        {
+          label: "My Second dataset",
+          fillColor : "rgba(0,0,0,0)",
+          strokeColor : "rgb(182, 217, 87)",
+          pointColor : "rgb(182, 217, 87)",
+          pointStrokeColor : "#fff",
+          pointHighlightFill : "#fff",
+          pointHighlightStroke : "rgba(151,187,205,1)",
+          data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        }
+        ]
+
+      }
+
+      var barChartData = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+        {
+          label: "My First dataset",
+          fillColor : "rgb(92, 186, 230)",
+          strokeColor : "rgb(92, 186, 230)",
+          pointColor : "rgb(92, 186, 230)",
+          pointStrokeColor : "#fff",
+          pointHighlightFill : "#fff",
+          pointHighlightStroke : "rgba(220,220,220,1)",
+          data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        },
+        {
+          label: "My Second dataset",
+          fillColor : "rgb(182, 217, 87)",
+          strokeColor : "rgb(182, 217, 87)",
+          pointColor : "rgb(182, 217, 87)",
+          pointStrokeColor : "#fff",
+          pointHighlightFill : "#fff",
+          pointHighlightStroke : "rgba(151,187,205,1)",
+          data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        }
+        ]
+
+      }
+
+     window.onload = function(){
+        var ctx_line = document.getElementById("templatemo-line-chart").getContext("2d");
+        var ctx_bar = document.getElementById("templatemo-bar-chart").getContext("2d");
+
+        window.myLine = new Chart(ctx_line).Line(lineChartData, {
+          responsive: true,
+          scaleShowGridLines: false
+        });
+
+        window.myBar = new Chart(ctx_bar).Bar(barChartData, {
+          responsive: true,
+          scaleShowGridLines: false
+        });
+        
+      }
+    </script>
     
   </body>
 </html>
