@@ -153,6 +153,27 @@
 
       }
 
+      var pieChartData = [
+      {
+        value: 300,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Red"
+      },
+      {
+        value: 50,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Green"
+      },
+      {
+        value: 100,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Yellow"
+      }
+      ]
+
       var barChartData = {
         labels : ["January","February","March","April","May","June","July"],
         datasets : [
@@ -183,6 +204,7 @@
      window.onload = function(){
         var ctx_line = document.getElementById("templatemo-line-chart").getContext("2d");
         var ctx_bar = document.getElementById("templatemo-bar-chart").getContext("2d");
+        var ctx_pie = document.getElementById("templatemo-pie-chart").getContext("2d");
 
         window.myLine = new Chart(ctx_line).Line(lineChartData, {
           responsive: true,
@@ -190,6 +212,11 @@
         });
 
         window.myBar = new Chart(ctx_bar).Bar(barChartData, {
+          responsive: true,
+          scaleShowGridLines: false
+        });
+
+        window.myPie = new Chart(ctx_pie).Pie(pieChartData, {
           responsive: true,
           scaleShowGridLines: false
         });
